@@ -1,104 +1,107 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
-        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
-        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1"
-        xmlns:news="http://www.google.com/schemas/sitemap-news/0.9"
-        xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0"
-        xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-    <!-- 🔥 Page d'accueil (Priorité maximale) -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+    <!-- Главна страница -->
     <url>
-        <loc>https://clairvoyancemedium.github.io/Comment-retrouver-l-amour-rapidement.github.io/</loc>
-        <lastmod>2025-02-17</lastmod>
-        <changefreq>daily</changefreq>
+        <loc>https://clairvoyancemedium.github.io/Efektivno-razvalyavane-na-magii-sreshtu-loshi-zaklinaniya-s-vgradena-zashtita.github.io/</loc>
+        <lastmod>2025-03-29</lastmod>
+        <changefreq>weekly</changefreq>
         <priority>1.0</priority>
         <image:image>
-            <image:loc>https://clairvoyancemedium.github.io/images/homepage-main.jpg</image:loc>
-            <image:title>Retrouver l'Amour Rapidement</image:title>
-            <image:caption>Techniques puissantes pour attirer et garder l'amour.</image:caption>
+            <image:loc>https://i.imgur.com/GmyGlKk.webp</image:loc>
+            <image:title>Лого на Ритуал за Разваляне и Защита</image:title>
+            <image:caption>Изображение, представящо услугата за разваляне на магии от разстояние</image:caption>
         </image:image>
-    </url>
-
-    <!-- 🔍 Pages principales -->
-    <url>
-        <loc>https://clairvoyancemedium.github.io/Comment-retrouver-l-amour-rapidement.github.io/rituels-amour/</loc>
-        <lastmod>2025-02-15</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.9</priority>
         <image:image>
-            <image:loc>https://clairvoyancemedium.github.io/images/rituels-amour.jpg</image:loc>
-            <image:title>Rituels d'Amour Puissants</image:title>
-            <image:caption>Découvrez comment les rituels d’amour peuvent renforcer vos relations.</image:caption>
+            <image:loc>https://i.imgur.com/KBYqPcf.webp</image:loc>
+            <image:title>Божествен Ритуал за Разваляне</image:title>
+            <image:caption>Илюстрация на мощния ритуал на Фредерик</image:caption>
         </image:image>
     </url>
-
+    <!-- Секция: Значението на Развалянето на Магии -->
     <url>
-        <loc>https://clairvoyancemedium.github.io/Comment-retrouver-l-amour-rapidement.github.io/voyance-email/</loc>
-        <lastmod>2025-02-15</lastmod>
-        <changefreq>weekly</changefreq>
+        <loc>https://clairvoyancemedium.github.io/Efektivno-razvalyavane-na-magii-sreshtu-loshi-zaklinaniya-s-vgradena-zashtita.github.io/#znachenie-razvalyavane</loc>
+        <lastmod>2025-03-29</lastmod>
+        <changefreq>monthly</changefreq>
         <priority>0.9</priority>
-        <image:image>
-            <image:loc>https://clairvoyancemedium.github.io/images/voyance-email.jpg</image:loc>
-            <image:title>Voyance par E-mail</image:title>
-            <image:caption>Posez vos questions à un voyant expérimenté par e-mail.</image:caption>
-        </image:image>
     </url>
-
-    <!-- 🎥 Contenu Vidéo (avec ID réel de la vidéo) -->
+    <!-- Секция: Защо да Извикаме Ритуал -->
     <url>
-        <loc>https://clairvoyancemedium.github.io/Comment-retrouver-l-amour-rapidement.github.io/videos/comment-seduire-vite/</loc>
-        <lastmod>2025-02-10</lastmod>
+        <loc>https://clairvoyancemedium.github.io/Efektivno-razvalyavane-na-magii-sreshtu-loshi-zaklinaniya-s-vgradena-zashtita.github.io/#zashto-ritual</loc>
+        <lastmod>2025-03-29</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <!-- Секция: Ползи -->
+    <url>
+        <loc>https://clairvoyancemedium.github.io/Efektivno-razvalyavane-na-magii-sreshtu-loshi-zaklinaniya-s-vgradena-zashtita.github.io/#polzi</loc>
+        <lastmod>2025-03-29</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
-        <video:video>
-            <video:player_loc>https://www.youtube.com/watch?v=ABCD1234EFG</video:player_loc>
-            <video:thumbnail_loc>https://clairvoyancemedium.github.io/images/video-thumbnail.jpg</video:thumbnail_loc>
-            <video:title>Comment séduire rapidement</video:title>
-            <video:description>Découvrez les meilleures techniques pour séduire efficacement.</video:description>
-        </video:video>
     </url>
-
-    <!-- 📰 Articles Google News -->
+    <!-- Секция: Откриване на Магия -->
     <url>
-        <loc>https://clairvoyancemedium.github.io/Comment-retrouver-l-amour-rapidement.github.io/news/nouvelle-technique-de-seduction/</loc>
-        <lastmod>2025-02-13</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.9</priority>
-        <news:news>
-            <news:publication>
-                <news:name>Voyance & Amour News</news:name>
-                <news:language>fr</news:language>
-            </news:publication>
-            <news:publication_date>2025-02-13</news:publication_date>
-            <news:title>Nouvelle Technique de Séduction Révélée</news:title>
-            <news:keywords>séduction, amour, relation</news:keywords>
-        </news:news>
+        <loc>https://clairvoyancemedium.github.io/Efektivno-razvalyavane-na-magii-sreshtu-loshi-zaklinaniya-s-vgradena-zashtita.github.io/#otkrivane</loc>
+        <lastmod>2025-03-29</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
     </url>
-
-    <!-- 📱 Page optimisée pour mobile -->
+    <!-- Секция: Фредерик -->
     <url>
-        <loc>https://clairvoyancemedium.github.io/Comment-retrouver-l-amour-rapidement.github.io/mobile/</loc>
-        <lastmod>2025-02-17</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.9</priority>
-        <mobile:mobile/>
+        <loc>https://clairvoyancemedium.github.io/Efektivno-razvalyavane-na-magii-sreshtu-loshi-zaklinaniya-s-vgradena-zashtita.github.io/#frederik</loc>
+        <lastmod>2025-03-29</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
     </url>
-
-    <!-- 📜 Pages légales -->
+    <!-- Секция: Гадаене по имейл -->
     <url>
-        <loc>https://clairvoyancemedium.github.io/Comment-retrouver-l-amour-rapidement.github.io/mentions-legales/</loc>
-        <lastmod>2025-01-10</lastmod>
+        <loc>https://clairvoyancemedium.github.io/Efektivno-razvalyavane-na-magii-sreshtu-loshi-zaklinaniya-s-vgradena-zashtita.github.io/#gadaene</loc>
+        <lastmod>2025-03-29</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <!-- Секция: Отзиви -->
+    <url>
+        <loc>https://clairvoyancemedium.github.io/Efektivno-razvalyavane-na-magii-sreshtu-loshi-zaklinaniya-s-vgradena-zashtita.github.io/#otzivi</loc>
+        <lastmod>2025-03-29</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <!-- Секция: Процедура -->
+    <url>
+        <loc>https://clairvoyancemedium.github.io/Efektivno-razvalyavane-na-magii-sreshtu-loshi-zaklinaniya-s-vgradena-zashtita.github.io/#protsedura</loc>
+        <lastmod>2025-03-29</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <!-- Статични ресурси -->
+    <url>
+        <loc>https://clairvoyancemedium.github.io/Efektivno-razvalyavane-na-magii-sreshtu-loshi-zaklinaniya-s-vgradena-zashtita.github.io/favicon_optimized.png</loc>
+        <lastmod>2025-03-29</lastmod>
         <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
+        <priority>0.3</priority>
+        <image:image>
+            <image:loc>https://clairvoyancemedium.github.io/Efektivno-razvalyavane-na-magii-sreshtu-loshi-zaklinaniya-s-vgradena-zashtita.github.io/favicon_optimized.png</image:loc>
+            <image:title>Фавикон на ClairvoyanceMedium</image:title>
+            <image:caption>Официална икона на сайта за разваляне на магии</image:caption>
+        </image:image>
     </url>
-
     <url>
-        <loc>https://clairvoyancemedium.github.io/Comment-retrouver-l-amour-rapidement.github.io/cgv/</loc>
-        <lastmod>2025-01-10</lastmod>
+        <loc>https://clairvoyancemedium.github.io/Efektivno-razvalyavane-na-magii-sreshtu-loshi-zaklinaniya-s-vgradena-zashtita.github.io/manifest.json</loc>
+        <lastmod>2025-03-29</lastmod>
         <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
+        <priority>0.3</priority>
     </url>
-
+    <!-- Допълнителни ресурси (критични шрифтове) -->
+    <url>
+        <loc>https://clairvoyancemedium.github.io/Consultation_de_voyance_par_email_pas_chere.github.io/Cinzel-Regular.woff2</loc>
+        <lastmod>2025-03-29</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.2</priority>
+    </url>
+    <url>
+        <loc>https://clairvoyancemedium.github.io/Consultation_de_voyance_par_email_pas_chere.github.io/PlayfairDisplay-Regular.woff2</loc>
+        <lastmod>2025-03-29</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.2</priority>
+    </url>
 </urlset>
