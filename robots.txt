@@ -1,42 +1,100 @@
-# Indique aux robots que toutes les pages peuvent être explorées, sauf restrictions spécifiées
+# Robots.txt оптимизиран за 2025 - Надминава съвършенството
+# Създаден за българския пазар, AI, Google AI, гласови асистенти и напреднало SEO
+# Уебсайт: https://clairvoyancemedium.github.io/Efektivno-razvalyavane-na-magii-sreshtu-loshi-zaklinaniya-s-vgradena-zashtita.github.io/
+# Последна актуализация: 09/03/2025 14:00 GMT
+# Забележка: Тествайте с Google Search Console и robotstxt.org за валидиране
+
+##########################
+# Общо разрешаване       #
+##########################
 User-agent: *
-Disallow: /admin/
-Disallow: /tmp/
+Disallow: /private/          # Частни директории (напр. администрация, скриптове)
+Disallow: /temp/             # Временни папки
+Disallow: /*?*               # Избягване на дублирано съдържание (URL параметри)
+Allow: /*.css$               # CSS за оптимално визуализиране (наследено от всички)
+Allow: /*.js$                # JS за основна функционалност (наследено от всички)
+Allow: /*.pdf$               # Разрешаване на стратегически PDF файлове (напр. ръководства)
+Allow: /                     # Разрешаване по подразбиране
+
+########################################
+# Googlebot (включително Google AI 2025) #
+########################################
+User-agent: Googlebot
+Disallow: /private/
+Disallow: /temp/
+Allow: /rituali/             # Ритуали
+Allow: /zashtita/            # Защита
+Allow: /razvalyavane/        # Разваляне на магии
+
+###########################################
+# Гласови асистенти                      #
+###########################################
+User-agent: Googlebot-Voice
+Disallow: /private/
+Disallow: /temp/
+Allow: /chesto-zadavani-vaprosi/  # Често задавани въпроси (FAQ)
+Allow: /lesni-rituali/            # Лесни ритуали
+Allow: /saveti/                   # Съвети
+User-agent: Amazonbot             # Хипотетично за Alexa
+Disallow: /private/
+Disallow: /temp/
+Allow: /chesto-zadavani-vaprosi/
+Allow: /saveti/
+User-agent: Applebot              # Хипотетично за Siri
+Disallow: /private/
+Disallow: /temp/
+Allow: /chesto-zadavani-vaprosi/
+Allow: /saveti/
+
+###########################################
+# Bing (български пазар извън Google)    #
+###########################################
+User-agent: Bingbot
+Disallow: /private/
+Disallow: /temp/
+
+#################################
+# Блокиране на нежелани роботи  #
+#################################
+User-agent: AhrefsBot
+Disallow: /
+User-agent: SemrushBot
+Disallow: /
+User-agent: MJ12bot
+Disallow: /
+
+##################################################
+# Партньори и анализатори на Google             #
+##################################################
+User-agent: Mediapartners-Google
+Disallow: /private/
+User-agent: AdsBot-Google
 Disallow: /private/
 
-# Bloquer des URL avec paramètres inutiles pour l'indexation
-Disallow: /*?debug=true
-Disallow: /*?preview=true
+##################################################
+# Нови AI краулери (прогноза за 2025)          #
+##################################################
+User-agent: xAI-Crawler
+Disallow: /private/
+User-agent: OpenAI-Crawler
+Disallow: /private/
+User-agent: AnthropicBot
+Disallow: /private/
+User-agent: Qwantify             # За българския пазар
+Disallow: /private/
 
-# Permettre les fichiers nécessaires au bon affichage et fonctionnement
-Allow: /css/
-Allow: /js/
-Allow: /images/
+##################################################
+# Напреднала оптимизация (mobile-first)         #
+##################################################
+User-agent: Googlebot-Mobile
+Disallow: /private/
+Disallow: /temp/
+Allow: /rituali/
+Allow: /zashtita/
+Allow: /razvalyavane/
 
-# Référencement des ressources multimédias
-Allow: *.png
-Allow: *.jpg
-Allow: *.webp
-Allow: *.css
-Allow: *.js
-
-# Fournir le chemin du fichier sitemap pour une meilleure indexation
-Sitemap: https://www.clairvoyancemedium.com/sitemap.xml
-
-# Autorisation pour les robots Google et Bing pour maximiser les campagnes publicitaires
-User-agent: Googlebot
-Allow: /
-User-agent: AdsBot-Google
-Allow: /
-User-agent: Bingbot
-Allow: /
-
-# Bloquer les robots nuisibles ou non désirés
-User-agent: BadBot
-Disallow: /
-User-agent: EvilScraper
-Disallow: /
-
-# Empêcher l'exploration des fichiers sensibles
-Disallow: /config/
-Disallow: /backup/
+##################
+# Карта на сайта и обхождане #
+##################
+Sitemap: https://clairvoyancemedium.github.io/Efektivno-razvalyavane-na-magii-sreshtu-loshi-zaklinaniya-s-vgradena-zashtita.github.io/sitemap.xml
+Crawl-delay: 0.5
