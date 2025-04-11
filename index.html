@@ -1184,3 +1184,453 @@ const knowledgeBase = [
     { question: "Атака | Агресия | Нападение | Враждебност | Нашествие | Злоба", fullAnswer: "Усетените агресии произтичат от невидима враждебна сила; повикай Фредерик от ClairVoyanceMedium.com, за да неутрализира тези заплахи и да осигури защитата ти. Физически или енергийни заплахи произтичат от невидима враждебна сила. Фредерик неутрализира тези атаки с мощни защити, осигурявайки ти безопасност и подсилен вътрешен мир. Предимства: защита и вътрешно спокойствие." },
     { question: "Трагедия | Черно | Неизбежно | Бедствие | Катастрофа | Фаталност", fullAnswer: "Натрупаните нещастия са резултат от магия, замразяваща съдбата ти; остави Фредерик от ClairVoyanceMedium.com да преобрази съдбата ти за победоносно бъдеще. Трагедии и бедствия сигнализират за магия, замразяваща съдбата ти. Фредерик може да преобрази тази фаталност в победоносно бъдеще, разчупвайки тези вериги, водейки те към сигурен успех и обрат във всички аспекти на живота ти. Предимства: победа и сигурен обрат." },
     { question: "Спешност | Криза | Незабавност | Бързане | Аларма | Опасност", fullAnswer: "Спешността на ситуацията е безспорна пред заплашителните сенки; повикай Фредерик от ClairVoyanceMedium.com, за да се намеси и да обезопаси съдбата ти. Криза и непосредствена опасност изискват незабавно действие срещу заплашителните сенки. Фредерик се намесва бързо, за да обезопаси съдбата ти,
+    { question: "Мъгла | Неяснота | Смът | Несигурност | Безредие | Мистерия", fullAnswer: "Несигурността, която засенчва яснотата ти, е резултат от скрита манипулация; обърни се към Фредерик от Кабинет ClairVoyanceMedium.com, за да освети пътя ти и възстанови доверието. Мисловна мъгла и несигурност са плод на скрита манипулация. Фредерик осветява пътя ти, премахвайки тези смущения, възстановявайки увереността ти за възвърната сигурност и посока. Ползи: възстановена увереност и ориентация." },
+    { question: "Разединение | Конфликт | Разделение | Кавга | Разрив | Раздор", fullAnswer: "Раздорът, разделящ обкръжението ти, е предизвикан от разрушителен магически удар; позволи на Фредерик от Кабинет ClairVoyanceMedium.com да събере отново връзките ти и възстанови хармонията. Кавги и разриви са предизвикани от разрушителен магически удар. Фредерик възстановява връзките ти, пречиствайки тези отношения за трайна хармония и възвърнато единство. Ползи: единство и социална хармония." },
+    { question: "Нестабилност | Смут | Безредие | Хаос | Разстройство | Катастрофа", fullAnswer: "Смущенията, които преобръщат живота ти, са резултат от скрита сила; позволи на Фредерик от Кабинет ClairVoyanceMedium.com да стабилизира съществуването ти за възвърнат ред и спокойствие. Вътрешен хаос и нестабилност са плод на скрита сила. Фредерик стабилизира живота ти, премахвайки тези влияния, връщайки ти ред и спокойствие. Ползи: баланс и възвърнат мир." },
+    { question: "Безредие | Разстройство | Контрол | Крехкост | Объркване | Лудост", fullAnswer: "Психическото разстройство, което изпитваш, е причинено от смущаващ магически удар; обърни се към Фредерик от Кабинет ClairVoyanceMedium.com да те центрира и възстанови вътрешния ти контрол. Хаос и загуба на контрол са предизвикани от смущаващ магически удар. Фредерик те центрира, разсейвайки тези влияния, връщайки ти яснота на мисълта. Ползи: умствена яснота и стабилност." },
+    { question: "Несправедливост | Неравенство | Вреда | Пристрастие | Грешка | Неблагоприятно положение", fullAnswer: "Несправедливостта, която те потиска, е резултат от изкривяващ магически удар; позволи на Фредерик от Кабинет ClairVoyanceMedium.com да възстанови равенството в живота ти. Неблагоприятни положения често са плод на изкривяващ магически удар. Фредерик възстановява справедливостта, отстранявайки тези влияния. Ползи: възвърната справедливост и личен баланс." },
+    { question: "Загадка | Пъзел | Скрито | Неразбиране | Було | Тайна", fullAnswer: "Мистериите, които те обграждат, са резултат от магически удар, скриващ истината; обърни се към Фредерик от Кабинет ClairVoyanceMedium.com да разкрие тези тайни. Неразбиране и загадки са предизвикани от магия, скриваща истината. Фредерик разкрива тайните, сваляйки булото на незнанието. Ползи: яснота и сигурност." },
+    { question: "Непознато | Дълбочина | Тежко | Странност | Бездна | Неизмеримо", fullAnswer: "Неизмеримата мистерия, която те обгръща, е тежка магия; позволи на Фредерик от Кабинет ClairVoyanceMedium.com да разсее този мрак. Дълбок мрак и странност са тежка магия. Фредерик разсейва тъмнината, разкривайки скритата истина. Ползи: прозрение и знание." },
+    { question: "Претоварване | Смазване | Затрупване | Изтощение | Насищане | Лудост", fullAnswer: "Претоварването, което те обременява, е от излишна тъмна енергия; обърни се към Фредерик от Кабинет ClairVoyanceMedium.com да облекчи товара. Умствено претоварване е от излишна тъмна енергия. Фредерик облекчава тежестта, освобождавайки жизнеността ти. Ползи: хармония и лекота." },
+    { question: "Контакт | Свържи се | Обаждане | Съобщение | Имейл | Връзка | Комуникация", fullAnswer: "Свържи се сега с Фредерик на имейл: contact.clairvoyancemedium@gmail.com. Екипът ни ще отговори бързо за консултация или мощен ритуал. Ползи: бърза реакция и трансформация." },
+    { question: "Нехармоничност | Разстройство | Колебание | Дисбаланс | Падане | Срив", fullAnswer: "Дисбалансът в теб е от нестабилен магически удар; позволи на Фредерик от Кабинет ClairVoyanceMedium.com да хармонизира душата ти. Колебанията са от нестабилен магически удар. Фредерик възстановява баланса. Ползи: стабилност и постоянство." },
+    { question: "Дезиориентация | Изгубен | Блуждаене | Объркване | Обърканост | Паника", fullAnswer: "Дезиориентацията ти е от магическа атака; обърни се към Фредерик от Кабинет ClairVoyanceMedium.com да намериш пътя си. Блуждаене е от магическа атака. Фредерик те насочва с увереност. Ползи: увереност и ориентация." },
+    { question: "Мъгла | Безредие | Ориентир | Объркване | Неяснота | Пропаст", fullAnswer: "Объркването в съзнанието ти е от тъмен магически удар; позволи на Фредерик от Кабинет ClairVoyanceMedium.com да изчисти виждането ти. Мисловен хаос е от тъмен магически удар. Фредерик изчиства виждането ти. Ползи: яснота и напредък." },
+    { question: "Полумрак | Сърце | Вътрешен | Мълчалив | Сълза | Страдание", fullAnswer: "Дълбоката скръб в теб е от сянка върху сърцето ти; обърни се към Фредерик от Кабинет ClairVoyanceMedium.com да възстанови светлината. Сълзите са от сянка върху сърцето. Фредерик утешава душата ти. Ползи: успокоение и обновяване." },
+    { question: "Разпадане | Унищожение | Слаб | Регресия | Упадък | Крехкост", fullAnswer: "Упадъкът на силите ти е от магия, изтощаваща енергията ти; позволи на Фредерик от Кабинет ClairVoyanceMedium.com да те съживи. Слабостта е от изтощаваща магия. Фредерик те съживява. Ползи: енергия и жизненост." },
+    { question: "Да | Съгласен | Добре | Одобрявам | Прието | Абониран | Разбира се", fullAnswer: "🙂" },
+    { question: "Чао | Довиждане | До скоро | Лека вечер | Лека нощ | Ще се върна", fullAnswer: "До скоро в светлината! Фредерик, помогнал на хиляди души, те пази. Не си сам срещу сенките - неговата сила надминава всяка тъмнина." },
+    { question: "Въобще не | Не", fullAnswer: "?" },
+    { question: "Мъка | Изпитание | Катастрофа | Превръщане | Криза | Шок", fullAnswer: "Кризата в живота ти е вероятно от магическа атака; обърни се към Фредерик от Кабинет ClairVoyanceMedium.com да възстанови реда. Шокът е от магическа атака. Фредерик възстановява реда. Ползи: стабилност и баланс." },
+    { question: "Неудобство | Лошо чувство | Дразнене | Тежест | Неприятност", fullAnswer: "Физическият дискомфорт е от смущаващ магически удар; позволи на Фредерик от Кабинет ClairVoyanceMedium.com да го отстрани. Тежестта е от магически удар. Фредерик пречиства тялото ти. Ползи: облекчение и релаксация." },
+    { question: "Буря | Ураган | Вълнение | Гняв | Ажитация | Мъчение", fullAnswer: "Бурята в душата ти е от тъмна сила; обърни се към Фредерик от Кабинет ClairVoyanceMedium.com да успокои ума ти. Вълнението е от тъмна сила. Фредерик възстановява мира ти. Ползи: спокойствие и стабилност." },
+    { question: "Напрежение | Принуда | Тяло | Вкочаняване | Изтезание | Стрес", fullAnswer: "Напрежението в тялото ти е от магически удар; позволи на Фредерик от Кабинет ClairVoyanceMedium.com да те освободи. Сковаността е от магически удар. Фредерик освобождава енергията ти. Ползи: релаксация и жизненост." },
+    { question: "Кой | Фредерик | Опит | Умения | Магьосник | Компетентност", fullAnswer: "Фредерик от Кабинет ClairVoyanceMedium.com е експерт с години опит в магията. С неговите умения и знания той трансформира съдби и кариери." },
+    { question: "Динамизъм | Енергия | Вътрешна | Сила | Импулс | Живост", fullAnswer: "Загубата на енергия е от магия, източваща силите ти; обърни се към Фредерик от Кабинет ClairVoyanceMedium.com да възстанови силата ти. Липсата на жизненост е от магически удар. Фредерик възстановява енергията ти. Ползи: сила и жизненост." },
+    { question: "Пламен | Страст | Ярко | Блясък | Топлина | Ентусиазъм", fullAnswer: "Загасващата страст в теб е от магия, задушаваща огъня ти; позволи на Фредерик от Кабинет ClairVoyanceMedium.com да го възпламени. Загуба на ентусиазъм е от магически удар. Фредерик възстановява креативността ти. Ползи: вдъхновение и енергия." },
+    { question: "Сияние | Светлина | Блясък | Лъч | Игра на цветове | Аура", fullAnswer: "Сиянието ти е замъглено от тъмна сила; обърни се към Фредерик от Кабинет ClairVoyanceMedium.com да го възстанови. Загуба на блясък е от тъмна сила. Фредерик връща сиянието ти. Ползи: блясък и успех." }
+];
+
+// Подготовка на базата знания
+function removeAccents(str) {
+    return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+}
+
+function levenshteinDistance(a, b) {
+    const matrix = Array(b.length + 1).fill(null).map(() => Array(a.length + 1).fill(null));
+    for (let i = 0; i <= a.length; i++) matrix[0][i] = i;
+    for (let j = 0; j <= b.length; j++) matrix[j][0] = j;
+    for (let j = 1; j <= b.length; j++) {
+        for (let i = 1; i <= a.length; i++) {
+            const indicator = a[i - 1] === b[j - 1] ? 0 : 1;
+            matrix[j][i] = Math.min(
+                matrix[j][i - 1] + 1,
+                matrix[j - 1][i] + 1,
+                matrix[j - 1][i - 1] + indicator
+            );
+        }
+    }
+    return matrix[b.length][a.length];
+}
+
+function phoneticNormalize(str) {
+    return removeAccents(str)
+        .replace(/ph/g, "f")
+        .replace(/k/g, "c")
+        .replace(/qu/g, "k")
+        .replace(/ss/g, "s")
+        .replace(/ée/g, "e")
+        .replace(/ai/g, "e");
+}
+
+const processedKnowledgeBase = knowledgeBase.map(item => ({
+    question: item.question.toLowerCase().split("|").map(word => phoneticNormalize(removeAccents(word.trim()))).filter(word => word.length > 0),
+    fullAnswer: item.fullAnswer
+}));
+
+let nonUnderstoodCount = 0;
+let conversationHistory = [];
+
+function cleanInput(input) {
+    return input.toLowerCase().replace(/[^\w\s]/g, "").split(/\s+/).map(word => phoneticNormalize(removeAccents(word))).filter(word => word.length > 0);
+}
+
+function findBestMatch(userInput) {
+    const userWords = cleanInput(userInput);
+    let bestMatch = null, maxScore = 0;
+
+    processedKnowledgeBase.forEach(item => {
+        let score = 0;
+        userWords.forEach(userWord => {
+            item.question.forEach(kbWord => {
+                const distance = levenshteinDistance(userWord, kbWord);
+                const similarity = 1 - distance / Math.max(userWord.length, kbWord.length);
+                if (similarity >= 0.6) {
+                    score += similarity;
+                }
+            });
+        });
+        if (score > maxScore) {
+            maxScore = score;
+            bestMatch = item;
+        }
+    });
+
+    return maxScore > 0 ? bestMatch : null;
+}
+
+// Функция getResponse за "довиждане" и "контакт"
+function getResponse(userMsg) {
+    const lowerMsg = userMsg.toLowerCase().trim();
+    conversationHistory.push(lowerMsg);
+
+    // Проверка за "довиждане" и варианти
+    const goodbyeTriggers = ["довиждане", "чао", "лека нощ", "лека вечер", "до скоро"];
+    if (goodbyeTriggers.some(phrase => lowerMsg === phrase || lowerMsg.startsWith(phrase))) {
+        nonUnderstoodCount = 0;
+        trackClick("Goodbye", "Interaction", 0);
+        return translations.goodbye;
+    } 
+    // Проверка за "контакт"
+    else if (lowerMsg === "контакт" || lowerMsg.startsWith("контакт")) {
+        nonUnderstoodCount = 0;
+        trackClick("ContactRequest", "Interaction", 0);
+        return "Свържи се сега с Фредерик на имейл: contact.clairvoyancemedium@gmail.com. Екипът ни ще отговори бързо за консултация или мощен ритуал. Ползи: бърза реакция и трансформация.";
+    } 
+    // Други основни отговори
+    else if (lowerMsg === "здравей") {
+        nonUnderstoodCount = 0;
+        trackClick("Greeting", "Interaction", 0);
+        return translations.greeting;
+    } else if (lowerMsg === "мерси" || lowerMsg === "благодаря" || lowerMsg === "много благодаря") {
+        nonUnderstoodCount = 0;
+        trackClick("Thanks", "Interaction", 0);
+        return translations.thanks;
+    } else if (["сериозно ли е", "сериозно", "опасно ли е"].includes(lowerMsg)) {
+        nonUnderstoodCount = 0;
+        trackClick("Serious", "Interaction", 0);
+        return translations.grave;
+    } else if (["съгласен", "да", "добре", "ок"].includes(lowerMsg)) {
+        nonUnderstoodCount = 0;
+        return translations.agree;
+    } 
+    // Търсене в базата знания
+    else {
+        const matchedItem = findBestMatch(userMsg);
+        if (matchedItem) {
+            nonUnderstoodCount = 0;
+            trackClick("ResponseGiven", "Interaction", 0);
+            return matchedItem.fullAnswer;
+        } else {
+            nonUnderstoodCount++;
+            trackClick("NotUnderstood", "Interaction", nonUnderstoodCount);
+            if (nonUnderstoodCount < 3) return translations.notUnderstood;
+            nonUnderstoodCount = 0;
+            return translations.notUnderstoodAfter;
+        }
+    }
+}
+
+// Събиране на съдържание при зареждане
+const siteContent = [];
+document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll('h1, h2, h3, p, li').forEach(element => {
+        const text = element.textContent.trim().toLowerCase();
+        if (text) siteContent.push({ text: cleanInput(text), raw: element.textContent });
+    });
+    document.querySelectorAll('script[type="application/ld+json"]').forEach(script => {
+        try {
+            const data = JSON.parse(script.textContent);
+            if (data['@type'] === 'FAQPage' && data.mainEntity) {
+                data.mainEntity.forEach(item => {
+                    const question = item.name.toLowerCase().trim();
+                    const answer = item.acceptedAnswer.text.trim();
+                    if (question && answer) siteContent.push({ text: cleanInput(question), raw: answer });
+                });
+            }
+        } catch (e) {
+            console.error("Грешка при парсване на JSON-LD:", e);
+        }
+    });
+});
+
+function getResponseFromSite(userMsg, callback) {
+    const matchedItem = findBestMatch(userMsg);
+    if (matchedItem) {
+        callback(matchedItem.fullAnswer);
+    } else {
+        const userWords = cleanInput(userMsg);
+        let bestMatch = null, maxScore = 0;
+
+        siteContent.forEach(item => {
+            let score = 0;
+            userWords.forEach(userWord => {
+                item.text.forEach(siteWord => {
+                    const distance = levenshteinDistance(userWord, siteWord);
+                    const similarity = 1 - distance / Math.max(userWord.length, siteWord.length);
+                    if (similarity >= 0.6) {
+                        score += similarity;
+                    }
+                });
+            });
+            if (score > maxScore) {
+                maxScore = score;
+                bestMatch = item.raw;
+            }
+        });
+
+        if (maxScore > 0 && bestMatch) {
+            callback(bestMatch);
+        } else {
+            callback(getResponse(userMsg));
+        }
+    }
+}
+
+function simulateTyping(callback) {
+    const typingMessage = document.createElement("p");
+    typingMessage.className = "bot-message";
+    typingMessage.textContent = "...";
+    chatMessages.appendChild(typingMessage);
+    chatMessages.scrollTop = chatMessages.scrollHeight;
+    setTimeout(() => {
+        chatMessages.removeChild(typingMessage);
+        callback();
+    }, conversationHistory.length > 2 ? 1000 : 800);
+}
+
+function addMessage(txt, cls) {
+    const p = document.createElement("p");
+    p.className = cls;
+    p.textContent = txt;
+    chatMessages.appendChild(p);
+    chatMessages.scrollTop = chatMessages.scrollHeight;
+    if (cls === "bot-message" && voiceEnabled) speak(txt);
+}
+
+// Управление на преместването
+let isDragging = false, currentX = 0, currentY = 0, initialX, initialY;
+const dragHandle = document.getElementById("chat-bubble");
+const chatContainer = document.getElementById("chat-container");
+const chatBox = document.getElementById("chat-box");
+const chatMessages = document.getElementById("chat-messages");
+
+dragHandle.addEventListener("mousedown", startDragging);
+dragHandle.addEventListener("touchstart", startDragging, { passive: false });
+document.addEventListener("mousemove", drag);
+document.addEventListener("mouseup", stopDragging);
+document.addEventListener("touchmove", drag, { passive: false });
+document.addEventListener("touchend", stopDragging);
+
+function startDragging(e) {
+    isDragging = true;
+    if (e.type === "mousedown") {
+        initialX = e.clientX - currentX;
+        initialY = e.clientY - currentY;
+    } else if (e.type === "touchstart") {
+        initialX = e.touches[0].clientX - currentX;
+        initialY = e.touches[0].clientY - currentY;
+    }
+}
+
+function drag(e) {
+    if (!isDragging) return;
+    e.preventDefault();
+    let newX = e.type === "mousemove" ? e.clientX - initialX : e.touches[0].clientX - initialX;
+    let newY = e.type === "mousemove" ? e.clientY - initialY : e.touches[0].clientY - initialY;
+    const rect = chatContainer.getBoundingClientRect();
+    const maxX = window.innerWidth - rect.width;
+    const maxY = window.innerHeight - rect.height;
+    currentX = Math.max(0, Math.min(newX, maxX));
+    currentY = Math.max(0, Math.min(newY, maxY));
+    chatContainer.style.left = `${currentX}px`;
+    chatContainer.style.top = `${currentY}px`;
+}
+
+function stopDragging() {
+    isDragging = false;
+}
+
+window.addEventListener('load', () => {
+    const rect = chatContainer.getBoundingClientRect();
+    currentX = window.innerWidth - rect.width - 20;
+    currentY = window.innerHeight - rect.height - 20;
+    chatContainer.style.left = `${currentX}px`;
+    chatContainer.style.top = `${currentY}px`;
+});
+
+function adjustChatContainerPosition() {
+    const rect = chatContainer.getBoundingClientRect();
+    const maxX = window.innerWidth - rect.width;
+    const maxY = window.innerHeight - rect.height;
+    currentX = Math.min(currentX, maxX);
+    currentX = Math.max(0, currentX);
+    currentY = Math.min(currentY, maxY);
+    currentY = Math.max(0, currentY);
+    chatContainer.style.left = `${currentX}px`;
+    chatContainer.style.top = `${currentY}px`;
+}
+
+window.addEventListener('resize', adjustChatContainerPosition);
+
+const chatToggle = document.getElementById("chat-toggle");
+const chatForm = document.getElementById("chat-form");
+const chatInput = document.getElementById("chat-input");
+let firstOpen = true;
+
+chatToggle.addEventListener("click", () => {
+    const isHidden = !chatBox.classList.contains("visible");
+    if (isHidden) {
+        chatContainer.style.width = "300px";
+        chatBox.classList.add("visible");
+        chatToggle.setAttribute("aria-expanded", "true");
+        trackClick("ChatOpen", "Interaction", 0);
+        if (!chatMessages.children.length) addMessage(translations.greeting, "bot-message");
+        adjustChatContainerPosition();
+        setTimeout(() => chatInput.focus(), 300);
+        if (firstOpen && ("SpeechRecognition" in window || "webkitSpeechRecognition" in window) && recognition) {
+            recognition.start();
+            firstOpen = false;
+        }
+    } else {
+        chatBox.classList.remove("visible");
+        chatToggle.setAttribute("aria-expanded", "false");
+        trackClick("ChatClose", "Interaction", 0);
+        chatContainer.style.width = "auto";
+        chatContainer.style.height = "auto";
+        adjustChatContainerPosition();
+    }
+});
+
+chatForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const userMsg = chatInput.value.trim();
+    if (!userMsg) return;
+    addMessage(userMsg, "user-message");
+    trackClick("ChatMessage", "Interaction", 0);
+    chatInput.value = "";
+    simulateTyping(() => {
+        getResponseFromSite(userMsg, (answer) => {
+            addMessage(answer, "bot-message");
+        });
+    });
+});
+
+let voiceEnabled = true;
+
+function speak(text) {
+    if (!voiceEnabled || !("speechSynthesis" in window)) return;
+    const utterance = new SpeechSynthesisUtterance(text);
+    utterance.lang = "bg-BG";
+    utterance.pitch = 0.5;
+    utterance.rate = 1.1;
+    const voices = window.speechSynthesis.getVoices();
+    if (voices.length > 0) {
+        const maleVoice = voices.find(v => v.name.toLowerCase().includes("bulgarian"));
+        if (maleVoice) utterance.voice = maleVoice;
+    }
+    window.speechSynthesis.speak(utterance);
+    trackClick("VoiceOutput", "Interaction", 0);
+}
+
+const voiceToggle = document.getElementById("voice-toggle");
+voiceToggle.addEventListener("click", () => {
+    voiceEnabled = !voiceEnabled;
+    voiceToggle.classList.toggle("disabled", !voiceEnabled);
+    trackClick(voiceEnabled ? "VoiceEnabled" : "VoiceDisabled", "Interaction", 0);
+});
+
+let speechRecognitionSupported = "SpeechRecognition" in window || "webkitSpeechRecognition" in window;
+let recognition = null;
+
+if (speechRecognitionSupported) {
+    const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+    recognition = new SpeechRecognition();
+    recognition.lang = "bg-BG";
+    recognition.interimResults = false;
+    recognition.maxAlternatives = 1;
+    recognition.onresult = (event) => {
+        const transcript = event.results[0][0].transcript;
+        addMessage(transcript, "user-message");
+        trackClick("VoiceInput", "Interaction", 0);
+        simulateTyping(() => {
+            getResponseFromSite(transcript, (answer) => {
+                addMessage(answer, "bot-message");
+            });
+        });
+    };
+    recognition.onend = () => trackClick("VoiceStop", "Interaction", 0);
+    recognition.onerror = (event) => trackClick("VoiceError", "Interaction", event.error);
+}
+
+if (!("speechSynthesis" in window)) voiceToggle.style.display = "none";
+</script>
+    
+  <script nonce="xai-48273">
+    document.addEventListener("DOMContentLoaded",function(){document.querySelectorAll("#current-year,#current-year-footer").forEach(e=>e.textContent=new Date().getFullYear());function addToFavorites(e){const t=e.querySelector(".favorite-text");t.innerHTML="⭐ Добавено!",t.style.color="#FFD700",e.setAttribute("aria-pressed","true"),/iPhone|iPad|iPod/i.test(navigator.userAgent)?alert("Споделяне > Добави в началния екран"):/Android/i.test(navigator.userAgent)?alert("Меню (⋮) > Добави в началния екран"):alert("Ctrl + D или Cmd + D");trackClick("Добавяне в любими","Interaction",0);}function trackClick(e,t="CTA",n=null){typeof gtag==="function"?gtag("event","click",{"event_category":t,"event_label":e,"value":n}):console.log("gtag недостъпен:",e,t,n);}const t=document.querySelectorAll(".favorite-button");t.forEach(e=>e.addEventListener("click",()=>addToFavorites(e)));const n=document.querySelectorAll(".carousel blockquote");let a=0;n[0].classList.add("active"),setInterval(()=>{n.forEach(e=>e.classList.remove("active")),n[a].classList.add("active"),a=(a+1)%n.length},4e3);});
+  </script>
+
+  <script nonce="xai-48273">
+  document.addEventListener("DOMContentLoaded", () => {
+    const sections = document.querySelectorAll("section");
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    sections.forEach(section => observer.observe(section));
+  });
+</script>
+
+<!-- Google Tag Manager -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    // Зареждане на Google Tag Manager (GTM)
+    var gtmScript = document.createElement("script");
+    gtmScript.src = "https://www.googletagmanager.com/gtm.js?id=GTM-XXXXXX";
+    gtmScript.async = true;
+    document.head.appendChild(gtmScript);
+
+    // Инициализация на dataLayer преди GTM
+    window.dataLayer = window.dataLayer || [];
+    
+    function gtag() { dataLayer.push(arguments); }
+
+    // Зареждане на Google Analytics (GA4) само при взаимодействие
+    function loadGA() {
+        if (!window.gaLoaded) {
+            var gaScript = document.createElement("script");
+            gaScript.src = "https://www.googletagmanager.com/gtag/js?id=G-2RSFE6WL4M";
+            gaScript.async = true;
+            document.head.appendChild(gaScript);
+            
+            gtag('js', new Date());
+            gtag('config', 'G-2RSFE6WL4M', { 'anonymize_ip': true, 'send_page_view': false });
+
+            window.gaLoaded = true;
+        }
+    }
+
+    // Зареждане на Google Ads при скрол
+    function loadGoogleAds() {
+        if (!window.adsLoaded) {
+            var adsScript = document.createElement("script");
+            adsScript.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js";
+            adsScript.async = true;
+            document.body.appendChild(adsScript);
+            window.adsLoaded = true;
+        }
+    }
+
+    // Събития за зареждане на GA и Google Ads
+    document.addEventListener("mousemove", loadGA, { once: true });
+    document.addEventListener("scroll", loadGoogleAds, { once: true });
+});
+</script>
+  
+</body>
+</html>
