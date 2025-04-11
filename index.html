@@ -1245,12 +1245,12 @@ function levenshteinDistance(a, b) {
 
 function phoneticNormalize(str) {
     return removeAccents(str)
-        .replace(/ph/g, "f")
-        .replace(/k/g, "c")
-        .replace(/qu/g, "k")
-        .replace(/ss/g, "s")
-        .replace(/ée/g, "e")
-        .replace(/ai/g, "e");
+        .replace(/ph/g, "ф")
+        .replace(/k/g, "ц")
+        .replace(/qu/g, "к")
+        .replace(/ss/g, "с")
+        .replace(/ée/g, "е")
+        .replace(/ai/g, "е");
 }
 
 const processedKnowledgeBase = knowledgeBase.map(item => ({
@@ -1289,38 +1289,38 @@ function findBestMatch(userInput) {
     return maxScore > 0 ? bestMatch : null;
 }
 
-// Коригирана функция getResponse за "довиждане" и "контакт"
+// Функция getResponse, коригирана за "довиждане" и "контакт"
 function getResponse(userMsg) {
     const lowerMsg = userMsg.toLowerCase().trim();
     conversationHistory.push(lowerMsg);
 
     // Приоритетна проверка за "довиждане" и неговите варианти
-    const goodbyeTriggers = ["довиждане", "чао", "до скоро", "лека вечер", "приятен ден", "бух", "бай"];
+    const goodbyeTriggers = ["довиждане", "довиждане", "до скоро", "приятен ден", "здравей", "чао", "дочуване"];
     if (goodbyeTriggers.some(phrase => lowerMsg === phrase || lowerMsg.startsWith(phrase))) {
         nonUnderstoodCount = 0;
-        trackClick("Довиждане", "Интеракция", 0);
+        trackClick("Довиждане", "Взаимодействие", 0);
         return translations.goodbye;
     } 
     // Приоритетна проверка за "контакт"
     else if (lowerMsg === "контакт" || lowerMsg.startsWith("контакт")) {
         nonUnderstoodCount = 0;
-        trackClick("Заявка за контакт", "Интеракция", 0);
-        return "Свържи се сега с Фредерик по имейл на следния адрес: contact.clairvoyancemedium@gmail.com. Нашият екип ще ти отговори бързо, за да организира консултация по имейл или мощен ритуал, гарантирайки бърза реакция и незабавна трансформация според твоите нужди. Предимства: бърза реакция и незабавна трансформация.";
+        trackClick("ЗаявкаЗаКонтакт", "Взаимодействие", 0);
+        return "Свържи се сега с Фредерик на имейл адреса: contact.clairvoyancemedium@gmail.com. Нашият екип ще ти отговори бързо, за да организира консултация по имейл или мощен ритуал, гарантирайки ти бързина и незабавна трансформация, съобразена с твоите нужди. Предимства: бързина и незабавна трансформация.";
     } 
     // Други основни отговори
     else if (lowerMsg === "здравей") {
         nonUnderstoodCount = 0;
-        trackClick("Поздрав", "Интеракция", 0);
+        trackClick("Поздрав", "Взаимодействие", 0);
         return translations.greeting;
-    } else if (lowerMsg === "благодаря" || lowerMsg === "благодаря ти" || lowerMsg === "много мило" || lowerMsg === "много благодаря") {
+    } else if (lowerMsg === "благодаря" || lowerMsg === "благодаря ви" || lowerMsg === "много мило" || lowerMsg === "благодаря много") {
         nonUnderstoodCount = 0;
-        trackClick("Благодарност", "Интеракция", 0);
+        trackClick("Благодарности", "Взаимодействие", 0);
         return translations.thanks;
     } else if (["сериозно ли е", "сериозно", "наистина ли е сериозно"].includes(lowerMsg)) {
         nonUnderstoodCount = 0;
-        trackClick("Сериозно", "Интеракция", 0);
+        trackClick("Сериозно", "Взаимодействие", 0);
         return translations.grave;
-    } else if (["разбира се", "да", "ясно", "ок"].includes(lowerMsg)) {
+    } else if (["съгласен", "да", "добре", "ок"].includes(lowerMsg)) {
         nonUnderstoodCount = 0;
         return translations.agree;
     } 
@@ -1329,11 +1329,11 @@ function getResponse(userMsg) {
         const matchedItem = findBestMatch(userMsg);
         if (matchedItem) {
             nonUnderstoodCount = 0;
-            trackClick("Даден отговор", "Интеракция", 0);
+            trackClick("ДаденОтговор", "Взаимодействие", 0);
             return matchedItem.fullAnswer;
         } else {
             nonUnderstoodCount++;
-            trackClick("Неразбран", "Интеракция", nonUnderstoodCount);
+            trackClick("Неразбрано", "Взаимодействие", nonUnderstoodCount);
             if (nonUnderstoodCount < 3) return translations.notUnderstood;
             nonUnderstoodCount = 0;
             return translations.notUnderstoodAfter;
@@ -1399,7 +1399,7 @@ function getResponseFromSite(userMsg, callback) {
 
 function simulateTyping(callback) {
     const typingMessage = document.createElement("p");
-    typingMessage.className = "bot-message";
+    typingMessage.className = "съобщение-от-бот";
     typingMessage.textContent = "...";
     chatMessages.appendChild(typingMessage);
     chatMessages.scrollTop = chatMessages.scrollHeight;
@@ -1415,15 +1415,15 @@ function addMessage(txt, cls) {
     p.textContent = txt;
     chatMessages.appendChild(p);
     chatMessages.scrollTop = chatMessages.scrollHeight;
-    if (cls === "bot-message" && voiceEnabled) speak(txt);
+    if (cls === "съобщение-от-бот" && voiceEnabled) speak(txt);
 }
 
-// Управление на преместването
+// Управление на придвижването
 let isDragging = false, currentX = 0, currentY = 0, initialX, initialY;
-const dragHandle = document.getElementById("chat-bubble");
-const chatContainer = document.getElementById("chat-container");
-const chatBox = document.getElementById("chat-box");
-const chatMessages = document.getElementById("chat-messages");
+const dragHandle = document.getElementById("чат-балон");
+const chatContainer = document.getElementById("чат-контейнер");
+const chatBox = document.getElementById("чат-кутия");
+const chatMessages = document.getElementById("чат-съобщения");
 
 dragHandle.addEventListener("mousedown", startDragging);
 dragHandle.addEventListener("touchstart", startDragging, { passive: false });
@@ -1483,19 +1483,19 @@ function adjustChatContainerPosition() {
 
 window.addEventListener('resize', adjustChatContainerPosition);
 
-const chatToggle = document.getElementById("chat-toggle");
-const chatForm = document.getElementById("chat-form");
-const chatInput = document.getElementById("chat-input");
+const chatToggle = document.getElementById("чат-превключвател");
+const chatForm = document.getElementById("чат-форма");
+const chatInput = document.getElementById("чат-въвеждане");
 let firstOpen = true;
 
 chatToggle.addEventListener("click", () => {
-    const isHidden = !chatBox.classList.contains("visible");
+    const isHidden = !chatBox.classList.contains("видим");
     if (isHidden) {
         chatContainer.style.width = "300px";
-        chatBox.classList.add("visible");
+        chatBox.classList.add("видим");
         chatToggle.setAttribute("aria-expanded", "true");
-        trackClick("Чатът е отворен", "Интеракция", 0);
-        if (!chatMessages.children.length) addMessage(translations.greeting, "bot-message");
+        trackClick("ОтварянеНаЧат", "Взаимодействие", 0);
+        if (!chatMessages.children.length) addMessage(translations.greeting, "съобщение-от-бот");
         adjustChatContainerPosition();
         setTimeout(() => chatInput.focus(), 300);
         if (firstOpen && ("SpeechRecognition" in window || "webkitSpeechRecognition" in window) && recognition) {
@@ -1503,9 +1503,9 @@ chatToggle.addEventListener("click", () => {
             firstOpen = false;
         }
     } else {
-        chatBox.classList.remove("visible");
+        chatBox.classList.remove("видим");
         chatToggle.setAttribute("aria-expanded", "false");
-        trackClick("Чатът е затворен", "Интеракция", 0);
+        trackClick("ЗатварянеНаЧат", "Взаимодействие", 0);
         chatContainer.style.width = "auto";
         chatContainer.style.height = "auto";
         adjustChatContainerPosition();
@@ -1516,12 +1516,12 @@ chatForm.addEventListener("submit", (e) => {
     e.preventDefault();
     const userMsg = chatInput.value.trim();
     if (!userMsg) return;
-    addMessage(userMsg, "user-message");
-    trackClick("Съобщение в чата", "Интеракция", 0);
+    addMessage(userMsg, "потребителско-съобщение");
+    trackClick("СъобщениеВЧат", "Взаимодействие", 0);
     chatInput.value = "";
     simulateTyping(() => {
         getResponseFromSite(userMsg, (answer) => {
-            addMessage(answer, "bot-message");
+            addMessage(answer, "съобщение-от-бот");
         });
     });
 });
@@ -1540,14 +1540,14 @@ function speak(text) {
         if (maleVoice) utterance.voice = maleVoice;
     }
     window.speechSynthesis.speak(utterance);
-    trackClick("Гласов изход", "Интеракция", 0);
+    trackClick("ГласовИзход", "Взаимодействие", 0);
 }
 
-const voiceToggle = document.getElementById("voice-toggle");
+const voiceToggle = document.getElementById("глас-превключвател");
 voiceToggle.addEventListener("click", () => {
     voiceEnabled = !voiceEnabled;
-    voiceToggle.classList.toggle("disabled", !voiceEnabled);
-    trackClick(voiceEnabled ? "Гласът е включен" : "Гласът е изключен", "Интеракция", 0);
+    voiceToggle.classList.toggle("изключен", !voiceEnabled);
+    trackClick(voiceEnabled ? "ГласВключен" : "ГласИзключен", "Взаимодействие", 0);
 });
 
 let speechRecognitionSupported = "SpeechRecognition" in window || "webkitSpeechRecognition" in window;
@@ -1561,38 +1561,38 @@ if (speechRecognitionSupported) {
     recognition.maxAlternatives = 1;
     recognition.onresult = (event) => {
         const transcript = event.results[0][0].transcript;
-        addMessage(transcript, "user-message");
-        trackClick("Гласов вход", "Интеракция", 0);
+        addMessage(transcript, "потребителско-съобщение");
+        trackClick("ГласовВход", "Взаимодействие", 0);
         simulateTyping(() => {
             getResponseFromSite(transcript, (answer) => {
-                addMessage(answer, "bot-message");
+                addMessage(answer, "съобщение-от-бот");
             });
         });
     };
-    recognition.onend = () => trackClick("Гласов вход спрян", "Интеракция", 0);
-    recognition.onerror = (event) => trackClick("Грешка при гласов вход", "Интеракция", event.error);
+    recognition.onend = () => trackClick("ГласСпрян", "Взаимодействие", 0);
+    recognition.onerror = (event) => trackClick("ГласоваГрешка", "Взаимодействие", event.error);
 }
 
 if (!("speechSynthesis" in window)) voiceToggle.style.display = "none";
 </script>
-    
-  <script nonce="xai-48273">
-    document.addEventListener("DOMContentLoaded",function(){document.querySelectorAll("#current-year,#current-year-footer").forEach(e=>e.textContent=new Date().getFullYear());function addToFavorites(e){const t=e.querySelector(".favorite-text");t.innerHTML="⭐ Добавено!",t.style.color="#FFD700",e.setAttribute("aria-pressed","true"),/iPhone|iPad|iPod/i.test(navigator.userAgent)?alert("Споделяне > Добави към началния екран"):/Android/i.test(navigator.userAgent)?alert("Меню (⋮) > Добави към началния екран"):alert("Ctrl + D или Cmd + D");trackClick("Добавяне в любими","Интеракция",0);}function trackClick(e,t="CTA",n=null){typeof gtag==="function"?gtag("event","click",{"event_category":t,"event_label":e,"value":n}):console.log("gtag недостъпен:",e,t,n);}const t=document.querySelectorAll(".favorite-button");t.forEach(e=>e.addEventListener("click",()=>addToFavorites(e)));const n=document.querySelectorAll(".carousel blockquote");let a=0;n[0].classList.add("active"),setInterval(()=>{n.forEach(e=>e.classList.remove("active")),n[a].classList.add("active"),a=(a+1)%n.length},4e3);});
-  </script>
 
-  <script nonce="xai-48273">
-  document.addEventListener("DOMContentLoaded", () => {
-    const sections = document.querySelectorAll("section");
+<script nonce="xai-48273">
+    document.addEventListener("DOMContentLoaded",function(){document.querySelectorAll("#текуща-година,#текуща-година-долен-колчонтитул").forEach(e=>e.textContent=new Date().getFullYear());function addToFavorites(e){const t=e.querySelector(".текст-за-любимо");t.innerHTML="⭐ Добавено!",t.style.color="#FFD700",e.setAttribute("aria-pressed","true"),/iPhone|iPad|iPod/i.test(navigator.userAgent)?alert("Сподели > Добави към началния екран"):/Android/i.test(navigator.userAgent)?alert("Меню (⋮) > Добави към началния екран"):alert("Ctrl + D или Cmd + D");trackClick("ДобавянеКъмЛюбими","Взаимодействие",0);}function trackClick(e,t="CTA",n=null){typeof gtag==="function"?gtag("event","кликване",{"event_category":t,"event_label":e,"value":n}):console.log("gtag недостъпен:",e,t,n);}const t=document.querySelectorAll(".бутон-за-любимо");t.forEach(e=>e.addEventListener("click",()=>addToFavorites(e)));const n=document.querySelectorAll(".карусел blockquote");let a=0;n[0].classList.add("активен"),setInterval(()=>{n.forEach(e=>e.classList.remove("активен")),n[a].classList.add("активен"),a=(a+1)%n.length},4e3);});
+</script>
+
+<script nonce="xai-48273">
+document.addEventListener("DOMContentLoaded", () => {
+    const sections = document.querySelectorAll("секция");
     const observer = new IntersectionObserver((entries, observer) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("visible");
-          observer.unobserve(entry.target);
-        }
-      });
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("видим");
+                observer.unobserve(entry.target);
+            }
+        });
     }, { threshold: 0.1 });
     sections.forEach(section => observer.observe(section));
-  });
+});
 </script>
 
 <!-- Google Tag Manager -->
@@ -1625,7 +1625,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    // Зареждане на Google Ads само ако потребителят превърти страницата
+    // Зареждане на Google Ads само ако потребителят превърта страницата
     function loadGoogleAds() {
         if (!window.adsLoaded) {
             var adsScript = document.createElement("script");
@@ -1636,7 +1636,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    // Потребителски събития за зареждане на GA и Google Ads
+    // Събития за потребители за зареждане на GA и Google Ads
     document.addEventListener("mousemove", loadGA, { once: true });
     document.addEventListener("scroll", loadGoogleAds, { once: true });
 });
