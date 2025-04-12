@@ -1538,7 +1538,7 @@ let voiceEnabled = true;
 function speak(text) {
     if (!voiceEnabled || !("speechSynthesis" in window)) return;
     const utterance = new SpeechSynthesisUtterance(text);
-    utterance.lang = "fr-FR"; // Оставено на френски, тъй като синтезаторите за български са ограничени
+    utterance.lang = "bg-BG"; // Оставено на френски, тъй като синтезаторите за български са ограничени
     utterance.pitch = 0.5;
     utterance.rate = 1.1;
     const voices = window.speechSynthesis.getVoices();
